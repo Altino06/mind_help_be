@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Data
 @Builder
+@Table(name = "tb_avaiable_consult_date")
 public class AvaiableConsultDate {
 
     @Id

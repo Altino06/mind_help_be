@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 @Entity
+@Table(name = "tb_address")
 public class Address {
 
     @Id

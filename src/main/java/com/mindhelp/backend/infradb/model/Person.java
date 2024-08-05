@@ -17,6 +17,7 @@ import java.util.List;
 @SuperBuilder
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "person")
+@Table(name = "tb_person")
 public abstract class Person {
 
     @Id
