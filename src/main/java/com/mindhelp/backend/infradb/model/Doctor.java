@@ -1,10 +1,11 @@
 package com.mindhelp.backend.infradb.model;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.*;
+import jakarta.persistence.OneToMany;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
@@ -19,5 +20,6 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 public class Doctor extends Person {
 
-    private List<LocalDateTime> availableConsultDates = new ArrayList<>();
+    @OneToMany(mappedBy = "doctor")
+    private List<AvaiableConsultDate> availableConsultDates = new ArrayList<>();
 }
