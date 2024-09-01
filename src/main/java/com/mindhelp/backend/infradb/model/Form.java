@@ -6,23 +6,20 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
 @Entity
-@Table(name = "tb_avaiable_consult_date")
-public class AvaiableConsultDate {
+@Table(name = "tb_form")
+public class Form {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDateTime avaiableConsultDate;
-
-    @ManyToOne
-    @JoinColumn(name = "doctor_id")
-    private Person doctor;
+    @OneToOne
+    @JoinColumn(name = "paciente_id")
+    private Pacient pacient;
+    private String formJson;
 }

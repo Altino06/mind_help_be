@@ -16,11 +16,14 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @SuperBuilder
-@Entity
 @EqualsAndHashCode(callSuper = true)
+@Entity
 @Table(name = "tb_doctor")
 public class Doctor extends Person {
 
     @OneToMany(mappedBy = "doctor")
     private List<AvaiableConsultDate> availableConsultDates = new ArrayList<>();
+
+    @OneToMany(mappedBy = "doctor")
+    private List<Consult> consultList;
 }

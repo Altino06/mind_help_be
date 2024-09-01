@@ -13,10 +13,10 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity
 @SuperBuilder
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "person")
+@DiscriminatorColumn(name = "type")
+@Entity
 @Table(name = "tb_person")
 public abstract class Person {
 
@@ -27,6 +27,8 @@ public abstract class Person {
     private String name;
     private String gender;
     private LocalDate birthDate;
+    private String email;
+    private String password;
 
     @OneToMany(mappedBy = "person")
     private List<Address> addressList = new ArrayList<>();

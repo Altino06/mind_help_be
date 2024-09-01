@@ -1,10 +1,7 @@
 package com.mindhelp.backend.infradb.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -13,16 +10,20 @@ import java.time.LocalDateTime;
 @Data
 @Builder
 @Entity
-@Table(name = "tb_avaiable_consult_date")
-public class AvaiableConsultDate {
+@Table(name = "tb_consult")
+public class Consult {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDateTime avaiableConsultDate;
+    @ManyToOne
+    @JoinColumn(name = "pacient_id")
+    private Pacient pacient;
 
     @ManyToOne
     @JoinColumn(name = "doctor_id")
-    private Person doctor;
+    private Doctor doctor;
+
+    private LocalDateTime consultDate;
 }
