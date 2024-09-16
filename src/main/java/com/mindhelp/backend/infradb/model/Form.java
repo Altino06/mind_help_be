@@ -21,5 +21,6 @@ public class Form {
     @OneToOne
     @JoinColumn(name = "paciente_id")
     private Pacient pacient;
+
     private String formJson;
 }

@@ -63,7 +63,6 @@ public class TestDB implements CommandLineRunner {
                 .birthDate(LocalDate.of(1999, 05, 01))
                 .addressList(Arrays.asList(adPacient))
                 .gender("male")
-                .consultDate(LocalDateTime.now())
                 .build();
 
         adPacient.setPerson(pac);

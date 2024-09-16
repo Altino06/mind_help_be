@@ -1,13 +1,13 @@
-/home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/app/dto/DoctorDTO.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/app/rest/DoctorResource.java
+/home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/app/dto/DoctorDTO.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/infradb/model/Consult.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/infradb/repository/FormRepository.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/infradb/model/Form.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/infradb/model/Doctor.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/infradb/repository/ConsultRepository.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/infradb/repository/PersonRepository.java
-/home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/app/utils/Utils.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/infradb/model/Person.java
+/home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/app/utils/Utils.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/app/dto/PersonDTO.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/app/dto/AvaiableConsultDateDTO.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/app/rest/PacientResource.java
@@ -18,8 +18,8 @@
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/infradb/testDB/TestDB.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/BackendApplication.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/infradb/model/Pacient.java
-/home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/app/dto/ConsultDateDTO.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/infradb/model/Address.java
+/home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/app/dto/ConsultDateDTO.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/infradb/model/AvaiableConsultDate.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/config/beans/BeansConfig.java
 /home/gab/Documents/mind help/mind_help_be/src/main/java/com/mindhelp/backend/app/dto/AddressDTO.java
