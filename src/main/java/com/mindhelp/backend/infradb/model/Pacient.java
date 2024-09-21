@@ -24,5 +24,5 @@ public class Pacient extends Person {
     private Form pacienteForm;
 
     @OneToMany(mappedBy = "pacient")
-    private List<Consult> consultList;
+    private Consult consult;
 }

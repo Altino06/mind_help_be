@@ -21,5 +21,5 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 public class PacientDTO extends Person {
 
-    private List<Consult> consultList;
+    private Consult consult;
 }
