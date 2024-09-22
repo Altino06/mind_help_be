@@ -1,6 +1,5 @@
 package com.mindhelp.backend.domain.mapper;
 
-import com.mindhelp.backend.app.dto.FormDTO;
 import com.mindhelp.backend.app.dto.PacientDTO;
 import com.mindhelp.backend.infradb.model.Pacient;
 import org.mapstruct.Mapper;

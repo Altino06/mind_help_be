@@ -23,6 +23,6 @@ public class Pacient extends Person {
     @OneToOne(mappedBy = "pacient", cascade = CascadeType.ALL)
     private Form pacienteForm;
 
-    @OneToMany(mappedBy = "pacient")
+    @OneToOne(mappedBy = "pacient")
     private Consult consult;
 }
