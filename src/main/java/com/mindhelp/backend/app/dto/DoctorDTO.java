@@ -15,6 +15,6 @@ import java.util.List;
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class DoctorDTO extends Person {
-    private List<AvaiableConsultDateDTO> avaiableConsultDateList;
+    private List<AvaiableConsultDateDTO> avaiableConsultDates;
     private List<ConsultDTO> consultList;
 }

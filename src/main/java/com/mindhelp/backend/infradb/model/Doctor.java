@@ -22,8 +22,8 @@ import java.util.List;
 public class Doctor extends Person {
 
     @OneToMany(mappedBy = "doctor")
-    private List<AvaiableConsultDate> availableConsultDates = new ArrayList<>();
+    private List<AvaiableConsultDate> avaiableConsultDates = new ArrayList<>();
 
     @OneToMany(mappedBy = "doctor")
-    private List<Consult> consultList;
+    private List<Consult> consultList = new ArrayList<>();
 }

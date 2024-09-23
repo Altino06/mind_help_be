@@ -2,7 +2,6 @@ package com.mindhelp.backend.domain.mapper;
 
 import com.mindhelp.backend.app.dto.PacientDTO;
 import com.mindhelp.backend.infradb.model.Address;
-import com.mindhelp.backend.infradb.model.Consult;
 import com.mindhelp.backend.infradb.model.Pacient;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-09-15T22:36:05-0300",
+    date = "2024-09-23T19:52:27-0300",
     comments = "version: 1.6.0, compiler: javac, environment: Java 21.0.3 (JetBrains s.r.o.)"
 )
 @Component
@@ -35,10 +34,7 @@ public class PacientMapperImpl implements PacientMapper {
         if ( list != null ) {
             pacient.addressList( new ArrayList<Address>( list ) );
         }
-        List<Consult> list1 = dto.getConsultList();
-        if ( list1 != null ) {
-            pacient.consultList( new ArrayList<Consult>( list1 ) );
-        }
+        pacient.consult( dto.getConsult() );
 
         return pacient.build();
     }
@@ -61,10 +57,7 @@ public class PacientMapperImpl implements PacientMapper {
         if ( list != null ) {
             pacientDTO.addressList( new ArrayList<Address>( list ) );
         }
-        List<Consult> list1 = pacient.getConsultList();
-        if ( list1 != null ) {
-            pacientDTO.consultList( new ArrayList<Consult>( list1 ) );
-        }
+        pacientDTO.consult( pacient.getConsult() );
 
         return pacientDTO.build();
     }

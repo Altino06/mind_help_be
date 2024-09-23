@@ -49,25 +49,24 @@ public class TestDB implements CommandLineRunner {
                 .build();
 
         Person doc = Doctor.builder()
-                .id(1L)
                 .name("Gabriel")
                 .birthDate(LocalDate.of(1999, 10, 16))
                 .addressList(Arrays.asList(adDoctor))
                 .gender("male")
-                .availableConsultDates(Arrays.asList(avaiableConsultDate))
+                .avaiableConsultDates(Arrays.asList(avaiableConsultDate))
                 .build();
 
         Person pac = Pacient.builder()
-                .id(2L)
                 .name("Matheus")
                 .birthDate(LocalDate.of(1999, 05, 01))
                 .addressList(Arrays.asList(adPacient))
                 .gender("male")
                 .build();
 
-        adPacient.setPerson(pac);
+
         adDoctor.setPerson(doc);
         avaiableConsultDate.setDoctor(doc);
+        adPacient.setPerson(pac);
 
         personRepository.saveAll(Arrays.asList(pac, doc));
         addressRepository.saveAll(Arrays.asList(adDoctor, adPacient));

@@ -4,16 +4,19 @@ import com.mindhelp.backend.app.dto.DoctorDTO;
 import com.mindhelp.backend.domain.DoctorDomain;
 import com.mindhelp.backend.domain.exception.NotFoundException;
 import com.mindhelp.backend.domain.exception.ObjectsAreEqualsException;
+import com.mindhelp.backend.domain.mapper.AvaiableConsulDateMapper;
 import com.mindhelp.backend.domain.mapper.DoctorMapper;
 import com.mindhelp.backend.domain.utils.ExceptionMessages;
 import com.mindhelp.backend.infradb.model.Doctor;
 import com.mindhelp.backend.infradb.repository.DoctorRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class DoctorDomainImpl implements DoctorDomain {
 
 
@@ -22,6 +25,9 @@ public class DoctorDomainImpl implements DoctorDomain {
 
     @Autowired
     private DoctorMapper mapper;
+
+    @Autowired
+    private AvaiableConsulDateMapper avaiableConsulDateMapper;
 
     @Override
     public List<DoctorDTO> getAllDoctors() {
@@ -40,14 +46,14 @@ public class DoctorDomainImpl implements DoctorDomain {
 
     @Transactional
     @Override
-    public void saveDoctor(DoctorDTO DoctorDTO) {
-        DoctorRepository.save(mapper.toEntity(DoctorDTO));
+    public void saveDoctor(DoctorDTO doctorDTO) {
+        DoctorRepository.save(mapper.toEntity(doctorDTO));
     }
 
     @Transactional
     @Override
-    public void updateDoctor(Long id, DoctorDTO DoctorDTO) {
-        Doctor updatedDoctor = mapper.toEntity(DoctorDTO);
+    public void updateDoctor(Long id, DoctorDTO doctorDTO) {
+        Doctor updatedDoctor = mapper.toEntity(doctorDTO);
         Doctor Doctor = DoctorRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException(ExceptionMessages.DOCTOR_NOT_FOUND));
 
