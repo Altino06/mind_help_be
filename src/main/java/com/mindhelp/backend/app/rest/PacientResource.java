@@ -1,11 +1,8 @@
 package com.mindhelp.backend.app.rest;
 
-import com.mindhelp.backend.app.dto.FormDTO;
 import com.mindhelp.backend.app.dto.PacientDTO;
 import com.mindhelp.backend.app.utils.Utils;
-import com.mindhelp.backend.domain.FormDomain;
 import com.mindhelp.backend.domain.PacientDomain;
-import jdk.javadoc.doclet.Reporter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
